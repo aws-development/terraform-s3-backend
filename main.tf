@@ -4,7 +4,7 @@ module "remote_state" {
   override_s3_bucket_name = true
   s3_bucket_name          = random_pet.wiz_s3_backend_bucket_name.id
   s3_bucket_name_replica  = random_pet.wiz_s3_backend_bucket_name_replica.id
-  
+  enable_replication      = false
   providers = {
     aws         = aws
     aws.replica = aws.replica
