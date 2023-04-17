@@ -2,9 +2,11 @@
 module "remote_state" {
   source = "nozaq/remote-state-s3-backend/aws"
   override_s3_bucket_name = true
+  override_iam_policy_name = true
   s3_bucket_name          = random_pet.wiz_s3_backend_bucket_name.id
   s3_bucket_name_replica  = random_pet.wiz_s3_backend_bucket_name_replica.id
   enable_replication      = true
+  iam_policy_name = "terraform-s3-backend-user-iam-policy"
   providers = {
     aws         = aws
     aws.replica = aws.replica
