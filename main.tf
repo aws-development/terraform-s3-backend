@@ -5,7 +5,7 @@ module "remote_state" {
   override_iam_policy_name = true
   s3_bucket_name          = random_pet.wiz_s3_backend_bucket_name.id
   s3_bucket_name_replica  = random_pet.wiz_s3_backend_bucket_name_replica.id
-  enable_replication      = false
+  enable_replication      = true
   iam_policy_name = "terraform-s3-backend-user-iam-policy"
   providers = {
     aws         = aws
