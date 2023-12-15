@@ -4,11 +4,15 @@ variable "AWS_ACCESS_KEY" {
 variable "AWS_SECRET_KEY" {
   type = string
 }
-variable "REGION" {
+variable "PRIMARY_REGION" {
   type    = string
   default = "us-east-1"
 }
 
+variable "REPLICA_REGION" {
+  type    = string
+  default = "us-east-1"
+}
 
 variable "lob" {
   type        = string

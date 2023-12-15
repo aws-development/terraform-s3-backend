@@ -11,7 +11,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region     = var.REGION
+  region     = var.PRIMARY_REGION
   access_key = var.AWS_ACCESS_KEY
   secret_key = var.AWS_SECRET_KEY
 
@@ -32,8 +32,8 @@ provider "aws" {
 
 # Configure the AWS Provider
 provider "aws" {
-  alias = "replica"
-  region     = "us-west-1"
+  alias      = "replica"
+  region     = var.REPLICA_REGION
   access_key = var.AWS_ACCESS_KEY
   secret_key = var.AWS_SECRET_KEY
 
