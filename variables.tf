@@ -12,7 +12,7 @@ variable "REGION" {
 
 variable "lob" {
   type        = string
-  default     = "wiz"
+  default     = "dev"
   description = "lob tag"
 }
 
@@ -24,13 +24,13 @@ variable "tf_provider" {
 
 variable "env" {
   type        = string
-  default     = "playpen"
+  default     = "dev"
   description = "env tag"
 }
 
 variable "platform" {
   type        = string
-  default     = "playpen"
+  default     = "dev"
   description = "platform tag"
 }
 
